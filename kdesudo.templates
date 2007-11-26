@@ -1,0 +1,6 @@
+Template: kdesudo/kdesu
+Type: boolean
+Default: false
+_Description: Use kdesudo as kdesu?
+ Kdesudo is command line compatible with kdesu and can be used as a drop-in 
+ replacement. There is a big chance that you want kdesudo used as kdesu.
