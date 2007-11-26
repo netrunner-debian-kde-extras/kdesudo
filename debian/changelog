@@ -1,14 +1,14 @@
 kdesudo (1.4-1) unstable; urgency=low
 
-  * Steal package from ubuntu..
-  * Initial upload to debian.. (Closes: #452659)
-  * Put me as maintainer..
-  * Use new homepage field..
-  * Remove kubuntu patch..
+  * Steal package from Ubuntu.
+  * Initial upload to Debian. (Closes: #452659)
+  * Put me as maintainer.
+  * Use new homepage field.
+  * Remove kubuntu patch.
   * Do debconf-stuff to ask wether using kdesudo as kdesu instead of
-    the ubuntu way of unconditionally doing it. Heavily inspired by dash
-    packaging..
-  * build with -Wl,--as-needed to shut up dpkg-shlibdeps..
+    the Ubuntu way of unconditionally doing it. Heavily inspired by dash
+    packaging.
+  * Build with -Wl,--as-needed to shut up dpkg-shlibdeps.
 
  -- Sune Vuorela <debian@pusling.com>  Sat, 24 Nov 2007 13:04:21 +0100
 
