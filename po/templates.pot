@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: Source: kdesudo@packages.debian.org\n"
-"POT-Creation-Date: 2007-11-24 14:33+0100\n"
+"Report-Msgid-Bugs-To: kdesudo@packages.debian.org\n"
+"POT-Creation-Date: 2007-12-29 20:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,20 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../kdesudo.templates:1001
-msgid "Use kdesudo as kdesu?"
+#: ../kdesudo.templates:2001
+msgid "Use KdeSudo in place of KdeSu?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../kdesudo.templates:1001
+#: ../kdesudo.templates:2001
+msgid "KdeSudo is a drop-in replacement for KdeSu."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../kdesudo.templates:2001
 msgid ""
-"Kdesudo is command line compatible with kdesu and can be used as a drop-in  "
-"replacement. There is a big chance that you want kdesudo used as kdesu."
+"Please choose whether KdeSudo should be the default front-end for gaining "
+"elevated privileges under KDE."
 msgstr ""
