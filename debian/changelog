@@ -8,6 +8,9 @@ kdesudo (2.0-2) unstable; urgency=low
   * Add french debconf translation. Thanks Christian Perrier (Closes: 459530)
   * Add dutch debconf translation. Thanks Bart Cornelis (Closes: 459702)
   * Add german debconf translation. Thanks Helge Kreutzmann (Closes: 460423)
+  * Add po-debconf to build-depends. lintian says it is missing. Parts are
+    used in clean target
+  * Remove unimportant warning from postrm script
 
 
  -- Sune Vuorela <debian@pusling.com>  Sat, 26 Jan 2008 15:01:07 +0100
