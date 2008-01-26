@@ -30,8 +30,9 @@ case "$1" in
 		db_purge
 	fi
     ;;
-  *) echo "$0: didn't understand being called with \`$1'" 1>&2
-     exit 0;;
+  *) 
+     exit 0
+  ;;
 esac
 
 #DEBHELPER#
