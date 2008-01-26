@@ -1,0 +1,59 @@
+#!/bin/sh
+set -e 
+
+case "$1" in
+	configure)
+
+	debconf=
+	if [ -f /usr/share/debconf/confmodule ]; then
+		. /usr/share/debconf/confmodule
+		debconf=yes
+	fi
+
+	if [ $debconf ]; then
+		db_get kdesudo/kdesu
+		case "$RET" in
+		true)
+			if ! dpkg-divert --list /usr/bin/kdesu | grep -q /usr/bin/kdesu
+			then
+				dpkg-divert --package kdesudo --divert /usr/bin/kdesu.kde --rename /usr/bin/kdesu
+				dpkg-divert --package kdesudo --divert /usr/share/man/man1/kdesu.1.gz.kde --rename /usr/share/man/man1/kdesu.1.gz
+				ln -s kdesudo /usr/bin/kdesu
+				ln -s kdesudo.1.gz /usr/share/man/man1/kdesu.1.gz
+			fi
+		;;
+		false)
+			if dpkg-divert --list /usr/bin/kdesu | grep -q "by kdesu"
+			then
+				if [ -L /usr/bin/kdesu ]
+				then
+					if [ "$(readlink -f /usr/bin/kdesu)" = "/usr/bin/kdesudo" ]
+					then
+						rm /usr/bin/kdesu
+						rm /usr/share/man/man1/kdesu.1.gz
+					fi
+				fi
+				if [ ! -e /usr/bin/kdesu ]
+				then
+					dpkg-divert --package kdesudo --rename --remove /usr/bin/kdesu
+					dpkg-divert --package kdesudo --rename --remove /usr/share/man/man1/kdesu.1.gz
+				fi
+			fi
+
+		;;
+		esac
+	fi
+	;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+
+#DEBHELPER#
+
+exit 0
