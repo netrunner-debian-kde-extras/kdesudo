@@ -1,3 +1,18 @@
+kdesudo (2.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Update description and debconf template. Thanks Christian Perrier.
+    (Closes: 457479). This upload doesn't prevent a upload mid january.
+  * Add portuguese debconf translations. Thanks Miguel Figueiredo.
+    (Closes: 457574)
+  * Add italian debconf translations. Thanks Luca Monducci. (Closes: 458194)
+  * Add finnish debconf translations. Thanks Esko Arajarvi. (Closes: 458175)
+  * Add czech debconf translations. Thanks Miroslav Kure. (Closes: 457679)
+  * Add danish debconf translation. Thanks to me.
+  * Bump standards
+
+ -- Sune Vuorela <debian@pusling.com>  Sat, 29 Dec 2007 21:15:33 +0100
+
 kdesudo (1.4-1) unstable; urgency=low
 
   * Steal package from Ubuntu.
