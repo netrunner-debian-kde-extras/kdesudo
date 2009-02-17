@@ -1,10 +1,8 @@
 #!/usr/bin/make -f
 
-export LDFLAGS="-Wl,--as-needed"
-
 include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
-include /usr/share/cdbs/1/class/kde.mk
+#include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+include /usr/share/cdbs/1/class/cmake.mk
 
 DEB_INSTALL_MANPAGES_kdesudo = kdesudo.1
 
@@ -14,3 +12,14 @@ build/kdesudo::
 clean::
 	debconf-updatepo
 	rm -f kdesudo.1
+
+get-orig-source::
+	@@dh_testdir
+	@@[ -d ../tarballs/. ]||mkdir -p ../tarballs
+	@@uscan --force-download --repack --destdir ../tarballs
+
+print-version:
+	@@echo DEB_SOURCE_PACKAGE: $(DEB_SOURCE_PACKAGE)
+	@@echo DEB_VERSION: $(DEB_VERSION)
+	@@echo DEB_NO_EPOCH_VERSION: $(DEB_NOEPOCH_VERSION)
+	@@echo DEB_UPSTREAM_VERSION: $(DEB_UPSTREAM_VERSION)

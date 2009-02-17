@@ -1,10 +1,13 @@
 Source: kdesudo
 Section: kde
 Priority: optional
-Maintainer: Sune Vuorela <debian@pusling.com>
-Build-Depends: debhelper (>> 5), cdbs, kdelibs4-dev, docbook2x,po-debconf
-Standards-Version: 3.7.3
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Didier Raboud <didier@raboud.com>
+Build-Depends: debhelper (>> 7), cdbs, kdelibs5-dev, docbook2x, po-debconf, cmake
+Standards-Version: 3.8.0
 Homepage: https://launchpad.net/kdesudo
+Vcs-Svn: svn://svn.debian.org/pkg-kde/kde-extras/kdesudo/trunk/
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/kde-extras/kdesudo/?op=log
 
 Package: kdesudo
 Architecture: any

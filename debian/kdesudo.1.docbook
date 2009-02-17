@@ -30,13 +30,10 @@
     <cmdsynopsis>
       <command>kdesudo</command>
       <arg choice="opt">
-        <option><replaceable>Qt-options</replaceable></option>
+        <option><replaceable>Generic-options</replaceable></option>
       </arg>
       <arg choice="opt">
-        <option><replaceable>KDE-options</replaceable></option>
-      </arg>
-      <arg choice="opt">
-        <option><replaceable>kdesu-options</replaceable></option>
+        <option><replaceable>kdesudo-options</replaceable></option>
       </arg>
     </cmdsynopsis>
   </refsynopsisdiv>
@@ -82,6 +79,61 @@
         <varlistentry>
           <term> <option>--</option> </term>
           <listitem> <para>Indicates end of options</para> </listitem>
+        </varlistentry>
+      </variablelist>
+      <variablelist>
+        <title>KdeSudo Options:</title>
+        <varlistentry>
+          <term> <option>-c « command »</option> </term>
+          <listitem> <para>Specifies the command to run</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-u « user »</option> </term>
+          <listitem> <para>Specifies the target uid [default is root]</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-n</option> </term>
+          <listitem> <para>Do not keep password</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-s</option> </term>
+          <listitem> <para>Forgets all passwords</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-p « priority »</option> </term>
+          <listitem> <para>Set priority value: between 0 and 100, 0 is lowest [default is 50]</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>--nonewdcop</option> </term>
+          <listitem> <para>Let command use existing dcopserver</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>--comment « comment »</option> </term>
+          <listitem> <para>Comment to display in the dialog box</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>--noignorebutton</option> </term>
+          <listitem> <para>Do not display « ignore » button</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-i « icon_name »</option> </term>
+          <listitem> <para>Specify icon to use in the password dialog</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-d</option> </term>
+          <listitem> <para>Do not show the command to be run in the dialog</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-r</option> </term>
+          <listitem> <para>Use realtime scheduling</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-f « file »</option> </term>
+          <listitem> <para>Use target UID if « file » is not writeable</para> </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term> <option>-t</option> </term>
+          <listitem> <para>Enable terminal output (no password keeping)</para> </listitem>
         </varlistentry>
       </variablelist>
     </para>

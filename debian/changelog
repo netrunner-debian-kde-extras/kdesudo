@@ -1,3 +1,41 @@
+kdesudo (3.3.1-1) UNRELEASED; urgency=low
+
+  * New upstream release for KDE 4 (Closes: #505858)
+  * debian/rules
+    - Rewrite from scratch using cdbs.
+    - Write get-orig-source and print-version
+  * debian/watch Add
+  * debian/copyright
+    - Add copyright holder of kdesudo/kcookie.cpp.
+  * debian/control
+    - Add Vcs-* fields.
+    - Adapt Build-Depends to new upstream (migration to KDE 4, get rid of
+      automake, autoconf and libtool, but gain cmake).
+    - Fix "[INTL:ja] please add Japanese po-debconf template translation
+      (ja.po)", thanks to Hideki Yamane (Closes: #510713)
+  * Use Ubuntu's manpage
+
+ -- Didier Raboud <didier@raboud.com>  Tue, 17 Feb 2009 16:39:26 +0100
+
+kdesudo (2.4-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix pending l10n bugs. Debconf translations:
+    - Spanish. Closes: #481657
+    - Turkish. Closes: #488505
+    - Basque. Closes: #498688
+    - Swedish. Closes: #498815
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 19 Sep 2008 07:54:15 +0200
+
+kdesudo (2.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Add gcc 4.3 fixes, thanks to Cyril Brulebois (Closes: 462699)
+  * Relibtoolize on the fly
+
+ -- Sune Vuorela <debian@pusling.com>  Sun, 09 Mar 2008 20:01:47 +0100
+
 kdesudo (2.0-2) unstable; urgency=low
 
   * The "thanks to the translators"-release
