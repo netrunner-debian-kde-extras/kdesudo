@@ -1,4 +1,4 @@
-kdesudo (3.3.1-1) UNRELEASED; urgency=low
+kdesudo (3.4-1) UNRELEASED; urgency=low
 
   * New upstream release for KDE 4 (Closes: #505858)
   * Acknowledge NMU. Thanks Christian !
@@ -14,7 +14,7 @@ kdesudo (3.3.1-1) UNRELEASED; urgency=low
       automake, autoconf and libtool, but gain cmake).
     - Fix "[INTL:ja] please add Japanese po-debconf template translation
       (ja.po)", thanks to Hideki Yamane (Closes: #510713)
-  * Use Ubuntu's manpage
+  * Manpage and translations are now in the tarball (from Rosetta).
 
  -- Didier Raboud <didier@raboud.com>  Tue, 17 Feb 2009 16:39:26 +0100
 

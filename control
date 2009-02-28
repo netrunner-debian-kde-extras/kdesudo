@@ -3,7 +3,7 @@ Section: kde
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Didier Raboud <didier@raboud.com>
-Build-Depends: debhelper (>> 7), cdbs, kdelibs5-dev, docbook2x, po-debconf, cmake
+Build-Depends: debhelper (>> 7), cdbs, kdelibs5-dev, po-debconf, cmake
 Standards-Version: 3.8.0
 Homepage: https://launchpad.net/kdesudo
 Vcs-Svn: svn://svn.debian.org/pkg-kde/kde-extras/kdesudo/trunk/

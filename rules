@@ -4,14 +4,8 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 #include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 include /usr/share/cdbs/1/class/cmake.mk
 
-DEB_INSTALL_MANPAGES_kdesudo = kdesudo.1
-
-build/kdesudo::
-	docbook2x-man debian/kdesudo.1.docbook
-
 clean::
 	debconf-updatepo
-	rm -f kdesudo.1
 
 get-orig-source::
 	@@dh_testdir
