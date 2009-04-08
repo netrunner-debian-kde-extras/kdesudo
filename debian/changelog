@@ -16,6 +16,8 @@ kdesudo (3.4-1) UNRELEASED; urgency=low
       (ja.po)", thanks to Hideki Yamane (Closes: #510713)
   * Manpage and translations are now in the tarball (from Rosetta).
 
+  * Bump Standards to 3.8.1. No other changes needed.
+
  -- Didier Raboud <didier@raboud.com>  Tue, 17 Feb 2009 16:39:26 +0100
 
 kdesudo (2.4-1.1) unstable; urgency=low
