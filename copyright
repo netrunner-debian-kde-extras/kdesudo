@@ -39,7 +39,7 @@ License:
    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
 On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL'.
+Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
 ---
 
@@ -48,7 +48,7 @@ Documentation License version 1.2 with no Invariant Sections, no
 Front-Cover Texts and no Back-Cover Texts.
 
 On Debian systems, the complete text of the GNU GNU Free Documentation
-License can be found in `/usr/share/common-licenses/GFDL'.
+License can be found in `/usr/share/common-licenses/GFDL-1.2'.
 
 ---
 
@@ -57,4 +57,4 @@ Public License either version 2 of the License, or
 (at your option) any later version.
 
 On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL'.
+Public License can be found in `/usr/share/common-licenses/GPL-2'.
