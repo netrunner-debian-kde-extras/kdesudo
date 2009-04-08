@@ -20,6 +20,8 @@ kdesudo (3.4-1) unstable; urgency=low
   * Manpage and translations (from Ubuntu/Launchpad/Rosetta) are now in the
     orig tarball. This was made on request by upstream (Anthony Mercantate).
     Many thanks!
+  * Add two lintian overrides for diversion-for-unknown-file.
+    The diversion is done on purpose and conditionally.
 
   * Acknowledge NMU. Thanks Christian !
   * Fix "[INTL:ja] please add Japanese po-debconf template translation
