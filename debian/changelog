@@ -8,6 +8,8 @@ kdesudo (3.4-1) UNRELEASED; urgency=low
   * debian/watch Add
   * debian/copyright
     - Add copyright holder of kdesudo/kcookie.cpp.
+    - Update copyright paths (do not point to symlinks to satisfy pedantic
+      lintian).
   * debian/control
     - Add Vcs-* fields.
     - Adapt Build-Depends to new upstream (migration to KDE 4, get rid of
