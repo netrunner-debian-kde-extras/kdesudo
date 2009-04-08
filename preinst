@@ -1,0 +1,36 @@
+#! /bin/sh
+
+set -e
+
+case "$1" in
+  upgrade)
+	oldVersion=$2
+	if dpkg --compare-versions $2 lt 3.4-1
+	then # We are updating from before KDE4 was here
+		if dpkg-divert --list /usr/bin/kdesu | grep -q "by kdesudo" 
+		then
+			if [ -L /usr/bin/kdesu ]
+			then
+				if [ "$(readlink -f /usr/bin/kdesu)" = "/usr/bin/kdesudo" ]
+				then
+					rm /usr/bin/kdesu
+					rm /usr/share/man/man1/kdesu.1.gz
+				fi
+			fi
+			if [ ! -e /usr/bin/kdesu ]
+			then
+	                	dpkg-divert --package kdesudo --rename --remove /usr/bin/kdesu
+				dpkg-divert --package kdesudo --rename --remove /usr/share/man/man1/kdesu.1.gz
+			fi
+			
+	        fi
+	fi
+    ;;
+  *) 
+     exit 0
+  ;;
+esac
+
+#DEBHELPER#
+
+exit 0

@@ -2,23 +2,29 @@
 
 set -e
 
+KDESU_ORIG=/usr/lib/kde4/libexec/kdesu
+KDESU_DEST=/usr/lib/kde4/libexec/kdesu.kde
+
+KDESU_MAN_ORIG=/usr/share/man/man1/kdesu.1.gz
+KDESU_MAN_DEST=/usr/share/man/man1/kdesu.kde.1.gz
+
 case "$1" in
   remove)
         div=$(dpkg-divert --list $1)
-        if dpkg-divert --list /usr/bin/kdesu | grep -q "by kdesudo" 
+        if dpkg-divert --list ${KDESU_ORIG} | grep -q "by kdesudo" 
 	then
-		if [ -L /usr/bin/kdesu ]
+		if [ -L ${KDESU_ORIG} ]
 		then
-			if [ "$(readlink -f /usr/bin/kdesu)" = "/usr/bin/kdesudo" ]
+			if [ "$(readlink -f ${KDESU_ORIG})" = "/usr/bin/kdesudo" ]
 			then
-				rm /usr/bin/kdesu
-				rm /usr/share/man/man1/kdesu.1.gz
+				rm ${KDESU_ORIG}
+				rm ${KDESU_MAN_ORIG}
 			fi
 		fi
-		if [ ! -e /usr/bin/kdesu ]
+		if [ ! -e ${KDESU_ORIG} ]
 		then
-                	dpkg-divert --package kdesudo --rename --remove /usr/bin/kdesu
-			dpkg-divert --package kdesudo --rename --remove /usr/share/man/man1/kdesu.1.gz
+                	dpkg-divert --package kdesudo --rename --remove ${KDESU_ORIG}
+			dpkg-divert --package kdesudo --rename --remove ${KDESU_MAN_ORIG}
 		fi
 		
         fi

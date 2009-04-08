@@ -16,6 +16,10 @@ kdesudo (3.4-1) UNRELEASED; urgency=low
       automake, autoconf and libtool, but gain cmake).
     - Fix "[INTL:ja] please add Japanese po-debconf template translation
       (ja.po)", thanks to Hideki Yamane (Closes: #510713)
+  * debian/{postrm,postinst}
+    - Update to new location of kdesu in KDE 4.
+  * debian/preinst
+    - Add to manage update from KDE 3.
   * Manpage and translations are now in the tarball (from Rosetta).
 
   * Bump Standards to 3.8.1. No other changes needed.
