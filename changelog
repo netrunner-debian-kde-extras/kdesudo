@@ -1,7 +1,6 @@
-kdesudo (3.4-1) UNRELEASED; urgency=low
+kdesudo (3.4-1) unstable; urgency=low
 
   * New upstream release for KDE 4 (Closes: #505858)
-  * Acknowledge NMU. Thanks Christian !
   * debian/rules
     - Rewrite from scratch using cdbs.
     - Write get-orig-source and print-version
@@ -14,14 +13,17 @@ kdesudo (3.4-1) UNRELEASED; urgency=low
     - Add Vcs-* fields.
     - Adapt Build-Depends to new upstream (migration to KDE 4, get rid of
       automake, autoconf and libtool, but gain cmake).
-    - Fix "[INTL:ja] please add Japanese po-debconf template translation
-      (ja.po)", thanks to Hideki Yamane (Closes: #510713)
   * debian/{postrm,postinst}
     - Update to new location of kdesu in KDE 4.
   * debian/preinst
     - Add to manage update from KDE 3.
-  * Manpage and translations are now in the tarball (from Rosetta).
+  * Manpage and translations (from Ubuntu/Launchpad/Rosetta) are now in the
+    orig tarball. This was made on request by upstream (Anthony Mercantate).
+    Many thanks!
 
+  * Acknowledge NMU. Thanks Christian !
+  * Fix "[INTL:ja] please add Japanese po-debconf template translation
+    (ja.po)", thanks to Hideki Yamane (Closes: #510713)
   * Bump Standards to 3.8.1. No other changes needed.
 
  -- Didier Raboud <didier@raboud.com>  Tue, 17 Feb 2009 16:39:26 +0100
