@@ -24,8 +24,8 @@ case "$1" in
 			then
 				dpkg-divert --package kdesudo --divert ${KDESU_DEST} --rename ${KDESU_ORIG}
 				dpkg-divert --package kdesudo --divert ${KDESU_MAN_DEST} --rename ${KDESU_MAN_ORIG}
-				ln -s kdesudo ${KDESU_ORIG}
-				ln -s kdesudo.1.gz ${KDESU_MAN_ORIG}
+				ln -s /usr/bin/kdesudo ${KDESU_ORIG}
+				ln -s /usr/share/man/man1/kdesudo.1.gz ${KDESU_MAN_ORIG}
 			fi
 		;;
 		false)
