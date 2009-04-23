@@ -1,0 +1,17 @@
+Source: kdesudo
+Section: kde
+Priority: optional
+Maintainer: Anthony Mercatante <tonio@ubuntu.com>
+Build-Depends: debhelper (>= 7), cdbs, kdelibs5-dev, cmake
+Standards-Version: 3.8.0
+Homepage: https://launchpad.net/kdesudo
+
+Package: kdesudo
+Architecture: any
+Depends: ${shlibs:Depends}, sudo
+Conflicts: kdesudo-kde4
+Replaces: kdesudo-kde4
+Description: sudo frontend for KDE4
+ KdeSudo is a graphical frontend for the sudo utility.
+ It allows you to run programs as another user by entering your password.
+
