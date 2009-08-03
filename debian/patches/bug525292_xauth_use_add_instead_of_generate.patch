@@ -20,7 +20,7 @@ Index: kdesudo-3.4.1/kdesudo/kdesudo.cpp
 -		+ QString::fromLocal8Bit(disp) + " . trusted timeout 60 >/dev/null 2>&1";
 +        QString c = "xauth_token=`/usr/bin/xauth -q list " + QString::fromLocal8Bit(disp)
 +                              + " | head -n 1 | awk '{ print $3; }'` &&"
-+                  + "/usr/bin/xauth -q -f " + m_tmpName + " add :0 . $xauth_token 2>/dev/null &&"
++                  + "/usr/bin/xauth -q -f " + m_tmpName + " add " + QString::fromLocal8Bit(disp) + " . $xauth_token 2>/dev/null &&"
 +                  + "echo " + m_tmpName;
  
  	blockSigChild();
