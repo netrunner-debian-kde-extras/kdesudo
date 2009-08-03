@@ -4,6 +4,7 @@ kdesudo (3.4.1-2) UNRELEASED; urgency=high
     using the now disabled SECURITY X extension (Closes: #525292).
     - Set high urgency for fixing an RC bug.
     - Add quilt build-depends
+  * Bump Standards to 3.8.2.
 
  -- Didier Raboud <didier@raboud.com>  Mon, 03 Aug 2009 10:39:06 +0200
 
