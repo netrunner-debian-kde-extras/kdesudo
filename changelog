@@ -1,4 +1,4 @@
-kdesudo (3.4.2-1) UNRELEASED; urgency=high
+kdesudo (3.4.2-1) unstable; urgency=high
 
   * New upstream release.
     - Avoids using the now disabled SECURITY X extension (Closes: #525292),
@@ -6,7 +6,7 @@ kdesudo (3.4.2-1) UNRELEASED; urgency=high
     - Set high urgency for fixing an RC bug.
   * Bump Standards to 3.8.2.
 
- -- Didier Raboud <didier@raboud.com>  Mon, 03 Aug 2009 10:39:06 +0200
+ -- Didier Raboud <didier@raboud.com>  Mon, 03 Aug 2009 14:19:32 +0200
 
 kdesudo (3.4.1-1) unstable; urgency=low
 
