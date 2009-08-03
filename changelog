@@ -1,9 +1,9 @@
-kdesudo (3.4.1-2) UNRELEASED; urgency=high
+kdesudo (3.4.2-1) UNRELEASED; urgency=high
 
-  * Add patch bug525292_xauth_use_add_instead_of_generate.patch . It avoids
-    using the now disabled SECURITY X extension (Closes: #525292).
+  * New upstream release.
+    - Avoids using the now disabled SECURITY X extension (Closes: #525292),
+      thanks to upstream inclusion of a Debian proposed patch.
     - Set high urgency for fixing an RC bug.
-    - Add quilt build-depends
   * Bump Standards to 3.8.2.
 
  -- Didier Raboud <didier@raboud.com>  Mon, 03 Aug 2009 10:39:06 +0200
