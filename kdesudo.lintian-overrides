@@ -1,0 +1,4 @@
+# We are voluntarily dpkg-divert'ing specific files from kdebase-runtime.
+# This is done on purpose and conditionally (see maintainer scripts).
+kdesudo binary: diversion-for-unknown-file usr/lib/kde4/libexec/kdesu postinst:19
+kdesudo binary: diversion-for-unknown-file usr/share/man/man1/kdesu.1.gz postinst:20

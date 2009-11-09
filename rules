@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+#include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+include /usr/share/cdbs/1/class/cmake.mk
+
+clean::
+	debconf-updatepo
+
+get-orig-source::
+	@@dh_testdir
+	@@[ -d ../tarballs/. ]||mkdir -p ../tarballs
+	@@uscan --force-download --repack --destdir ../tarballs
+
+print-version:
+	@@echo DEB_SOURCE_PACKAGE: $(DEB_SOURCE_PACKAGE)
+	@@echo DEB_VERSION: $(DEB_VERSION)
+	@@echo DEB_NO_EPOCH_VERSION: $(DEB_NOEPOCH_VERSION)
+	@@echo DEB_UPSTREAM_VERSION: $(DEB_UPSTREAM_VERSION)

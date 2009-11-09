@@ -1,0 +1,19 @@
+Source: kdesudo
+Section: kde
+Priority: optional
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Didier Raboud <didier@raboud.com>
+Build-Depends: debhelper (>> 7), cdbs, kdelibs5-dev, po-debconf, cmake
+Standards-Version: 3.8.2
+Homepage: https://launchpad.net/kdesudo
+Vcs-Svn: svn://svn.debian.org/pkg-kde/kde-extras/kdesudo/trunk/
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/kde-extras/kdesudo/?op=log
+
+Package: kdesudo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, sudo
+Description: sudo frontend for KDE
+ KdeSudo is a graphical frontend for the sudo utility, which allows
+ users to run programs as root (or another user) by giving their own
+ password.
+
