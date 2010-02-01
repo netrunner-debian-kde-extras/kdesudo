@@ -1,3 +1,24 @@
+kdesudo (3.4.2.3-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - Add --desktop cmd line option to manually specify the desktop file used
+      for resolving name and icon
+    - Fixes LP: #422919 set bugAddress to lp (suggested by Dario Andres)
+  * Update the Portuguese translation. Thanks to Américo Monteiro for the
+    report and patch! (Closes: #567653)
+  * Update Standards to 3.8.4 without changes needed.
+
+ -- Didier Raboud <didier@raboud.com>  Mon, 26 Oct 2009 14:44:01 +0100
+
+kdesudo (3.4.2.1-1) unstable; urgency=high
+
+  * New upstream release.
+    - Closes: #525292 way better: Use QProcess built-in pipes and get rid of the
+      hackish shell.
+    - Urgency high for re-fixing an RC bug.
+
+ -- Didier Raboud <didier@raboud.com>  Tue, 04 Aug 2009 12:42:58 +0200
+
 kdesudo (3.4.2-1) unstable; urgency=high
 
   * New upstream release.
