@@ -1,4 +1,4 @@
-kdesudo (3.4.2.3-1) UNRELEASED; urgency=low
+kdesudo (3.4.2.3-1) unstable; urgency=low
 
   * New upstream release.
     - Add --desktop cmd line option to manually specify the desktop file used
@@ -8,7 +8,7 @@ kdesudo (3.4.2.3-1) UNRELEASED; urgency=low
     report and patch! (Closes: #567653)
   * Update Standards to 3.8.4 without changes needed.
 
- -- Didier Raboud <didier@raboud.com>  Mon, 26 Oct 2009 14:44:01 +0100
+ -- Didier Raboud <didier@raboud.com>  Mon, 01 Feb 2010 18:04:04 +0100
 
 kdesudo (3.4.2.1-1) unstable; urgency=high
 
