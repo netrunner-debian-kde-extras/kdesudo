@@ -1,4 +1,4 @@
-kdesudo (3.4.2.3-2) UNRELEASED; urgency=low
+kdesudo (3.4.2.3-2) unstable; urgency=low
 
   * Portuguese translations
     - Update the debconf po translation. Thanks to Américo Monteiro for the
@@ -7,7 +7,7 @@ kdesudo (3.4.2.3-2) UNRELEASED; urgency=low
       upload.
   * Switch to 3.0 (quilt) source format.
 
- -- Didier Raboud <didier@raboud.com>  Wed, 03 Feb 2010 18:07:08 +0100
+ -- Didier Raboud <didier@raboud.com>  Wed, 03 Feb 2010 18:40:55 +0100
 
 kdesudo (3.4.2.3-1) unstable; urgency=low
 
