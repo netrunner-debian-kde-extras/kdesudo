@@ -5,6 +5,7 @@ kdesudo (3.4.2.3-2) UNRELEASED; urgency=low
       report and patch! (Closes: #568146).
     - Add po_pt_update.patch to really Closes: #567653, wrongly fixed in last
       upload.
+  * Switch to 3.0 (quilt) source format.
 
  -- Didier Raboud <didier@raboud.com>  Wed, 03 Feb 2010 18:07:08 +0100
 
