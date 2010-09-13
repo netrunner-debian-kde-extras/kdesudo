@@ -1,0 +1,161 @@
+# Polish translation for kdesudo
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the kdesudo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdesudo\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-09-26 00:28+0200\n"
+"PO-Revision-Date: 2008-03-01 19:09+0000\n"
+"Last-Translator: Pawel Dyda <pawel.dyda@gazeta.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-02-16 13:36+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: kdesudo/main.cpp:41
+msgid "KdeSudo"
+msgstr "KdeSudo"
+
+#: kdesudo/main.cpp:42
+msgid "Sudo frontend for KDE"
+msgstr ""
+
+#: kdesudo/main.cpp:44
+msgid "(C) 2007 - 2008 Anthony Mercatante"
+msgstr ""
+
+#: kdesudo/main.cpp:48
+msgid "Robert Gruber"
+msgstr ""
+
+#: kdesudo/main.cpp:50
+msgid "Anthony Mercatante"
+msgstr ""
+
+#: kdesudo/main.cpp:52
+msgid "Martin Böhm"
+msgstr ""
+
+#: kdesudo/main.cpp:54
+msgid "Jonathan Riddell"
+msgstr ""
+
+#: kdesudo/main.cpp:60
+msgid "sets a runas user"
+msgstr "uruchom z uprawnieniami tego użytkownika"
+
+#: kdesudo/main.cpp:61 kdesudo/main.cpp:76
+msgid "The command to execute"
+msgstr "Polecenie do uruchomienia"
+
+#: kdesudo/main.cpp:62
+msgid "Forget passwords"
+msgstr "Nie zapamiętuj haseł"
+
+#: kdesudo/main.cpp:63
+msgid "Specify icon to use in the password dialog"
+msgstr "Ikona do wykorzystania w oknie wprowadzania hasła"
+
+#: kdesudo/main.cpp:65
+msgid "Do not show the command to be run in the dialog"
+msgstr "Nie pokazuj polecenia uruchamianego w oknie"
+
+#: kdesudo/main.cpp:66
+msgid "Process priority, between 0 and 100, 0 the lowest [50]"
+msgstr "Priorytet procesu, pomiędzy 0 a 100, najniższy [50]"
+
+#: kdesudo/main.cpp:68
+msgid "Use realtime scheduling"
+msgstr "Użyj szeregowania w czasie rzeczywistym"
+
+#: kdesudo/main.cpp:69
+msgid "Use target UID if <file> is not writeable"
+msgstr "Use UID celu jeśli <file> jest niezapisywalny"
+
+#: kdesudo/main.cpp:70
+msgid "Fake option for KDE's KdeSu compatibility"
+msgstr "Udawaj opcję dla kompatybilności z KDE's KdeSu"
+
+#: kdesudo/main.cpp:71
+msgid "Do not keep password"
+msgstr "Nie przechowuj hasła"
+
+#: kdesudo/main.cpp:72
+msgid "Use existing DCOP server"
+msgstr "Użyj istniejącego serwera DCOP"
+
+#: kdesudo/main.cpp:73
+msgid "The comment that should be displayed in the dialog"
+msgstr "Komentarz do wyświetlenia w dialogu"
+
+#: kdesudo/main.cpp:75
+msgid "Do not display « ignore » button"
+msgstr "Nie pokazuj przycisku « ignore »"
+
+#: kdesudo/kdesudo.cpp:80
+msgid ""
+"No command arguments supplied!\n"
+"Usage: kdesudo [-u <runas>] <command>\n"
+"KdeSudo will now exit..."
+msgstr ""
+"Nie podano argumentów dla polecenia!\n"
+"Użycie: kdesudo [-u <uruchomjako>] <polecenie>\n"
+"KdeSudo zakończy działanie..."
+
+#: kdesudo/kdesudo.cpp:195 kdesudo/kdesudo.cpp:208
+msgid "Priority:"
+msgstr "Priorytet:"
+
+#: kdesudo/kdesudo.cpp:195
+msgid "realtime:"
+msgstr "w czasie rzeczywistym:"
+
+#: kdesudo/kdesudo.cpp:252
+msgid "Command:"
+msgstr "Polecenie:"
+
+#: kdesudo/kdesudo.cpp:257
+msgid "needs administrative privileges. "
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:260
+msgid "Please enter your password."
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:262
+#, kde-format
+msgid "Please enter password for <b>%1</b>."
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:302
+msgid "<b>Warning: </b>"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:302
+msgid "<b>Incorrect password, please try again.</b>"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:304
+msgid "Wrong password! Exiting..."
+msgstr "Błędne hasło! Kończenie działania..."
+
+#: kdesudo/kdesudo.cpp:308
+msgid "Command not found!"
+msgstr "Polecenie nie zostało odnalezione!"
+
+#: kdesudo/kdesudo.cpp:310
+msgid "Your username is unknown to sudo!"
+msgstr "Sudo nie rozpoznało nazwy użytkownika!"
+
+#: kdesudo/kdesudo.cpp:312
+msgid "Your user is not allowed to run the specified command!"
+msgstr "Użytkownik nie ma uprawnień do uruchomienia tego polecenia!"
+
+#: kdesudo/kdesudo.cpp:314 kdesudo/kdesudo.cpp:316
+msgid "Your user is not allowed to run sudo on this host!"
+msgstr "Użytkownik nie ma uprawnień do korzystania z sudo na tym komputerze!"
