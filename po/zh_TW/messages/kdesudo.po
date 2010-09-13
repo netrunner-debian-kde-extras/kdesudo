@@ -1,0 +1,158 @@
+# Traditional Chinese translation for kdesudo
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the kdesudo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdesudo\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-09-26 00:28+0200\n"
+"PO-Revision-Date: 2008-02-21 07:32+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Traditional Chinese <zh_TW@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-02-16 13:36+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: kdesudo/main.cpp:41
+msgid "KdeSudo"
+msgstr ""
+
+#: kdesudo/main.cpp:42
+msgid "Sudo frontend for KDE"
+msgstr ""
+
+#: kdesudo/main.cpp:44
+msgid "(C) 2007 - 2008 Anthony Mercatante"
+msgstr ""
+
+#: kdesudo/main.cpp:48
+msgid "Robert Gruber"
+msgstr ""
+
+#: kdesudo/main.cpp:50
+msgid "Anthony Mercatante"
+msgstr ""
+
+#: kdesudo/main.cpp:52
+msgid "Martin Böhm"
+msgstr ""
+
+#: kdesudo/main.cpp:54
+msgid "Jonathan Riddell"
+msgstr ""
+
+#: kdesudo/main.cpp:60
+msgid "sets a runas user"
+msgstr ""
+
+#: kdesudo/main.cpp:61 kdesudo/main.cpp:76
+msgid "The command to execute"
+msgstr ""
+
+#: kdesudo/main.cpp:62
+msgid "Forget passwords"
+msgstr ""
+
+#: kdesudo/main.cpp:63
+msgid "Specify icon to use in the password dialog"
+msgstr ""
+
+#: kdesudo/main.cpp:65
+msgid "Do not show the command to be run in the dialog"
+msgstr ""
+
+#: kdesudo/main.cpp:66
+msgid "Process priority, between 0 and 100, 0 the lowest [50]"
+msgstr ""
+
+#: kdesudo/main.cpp:68
+msgid "Use realtime scheduling"
+msgstr ""
+
+#: kdesudo/main.cpp:69
+msgid "Use target UID if <file> is not writeable"
+msgstr ""
+
+#: kdesudo/main.cpp:70
+msgid "Fake option for KDE's KdeSu compatibility"
+msgstr ""
+
+#: kdesudo/main.cpp:71
+msgid "Do not keep password"
+msgstr ""
+
+#: kdesudo/main.cpp:72
+msgid "Use existing DCOP server"
+msgstr ""
+
+#: kdesudo/main.cpp:73
+msgid "The comment that should be displayed in the dialog"
+msgstr ""
+
+#: kdesudo/main.cpp:75
+msgid "Do not display « ignore » button"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:80
+msgid ""
+"No command arguments supplied!\n"
+"Usage: kdesudo [-u <runas>] <command>\n"
+"KdeSudo will now exit..."
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:195 kdesudo/kdesudo.cpp:208
+msgid "Priority:"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:195
+msgid "realtime:"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:252
+msgid "Command:"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:257
+msgid "needs administrative privileges. "
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:260
+msgid "Please enter your password."
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:262
+#, kde-format
+msgid "Please enter password for <b>%1</b>."
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:302
+msgid "<b>Warning: </b>"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:302
+msgid "<b>Incorrect password, please try again.</b>"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:304
+msgid "Wrong password! Exiting..."
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:308
+msgid "Command not found!"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:310
+msgid "Your username is unknown to sudo!"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:312
+msgid "Your user is not allowed to run the specified command!"
+msgstr ""
+
+#: kdesudo/kdesudo.cpp:314 kdesudo/kdesudo.cpp:316
+msgid "Your user is not allowed to run sudo on this host!"
+msgstr ""
