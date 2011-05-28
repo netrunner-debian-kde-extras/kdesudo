@@ -14,41 +14,44 @@
 #include <QtCore/QByteRef>
 
 
-namespace KDESu {
-
-namespace KDESuPrivate {
-
-/**
- * Utility class to access the authentication tokens needed to run a KDE
- * program (X11 cookies on X11, for instance).
- * @internal
- */
-
-class KCookie
+namespace KDESu
 {
-public:
-    KCookie();
-    ~KCookie();
 
-    /**
-     * Returns the X11 display.
-     */
-    QByteArray display() const;
+    namespace KDESuPrivate
+    {
+
+        /**
+         * Utility class to access the authentication tokens needed to run a KDE
+         * program (X11 cookies on X11, for instance).
+         * @internal
+         */
+
+        class KCookie
+        {
+        public:
+            KCookie();
+            ~KCookie();
+
+            /**
+             * Returns the X11 display.
+             */
+            QByteArray display() const;
 
 #ifdef Q_WS_X11
-    /**
-     * Returns the X11 magic cookie, if available.
-     */
-    QByteArray displayAuth() const;
+            /**
+             * Returns the X11 magic cookie, if available.
+             */
+            QByteArray displayAuth() const;
 #endif
 
-private:
-    void getXCookie();
+        private:
+            void getXCookie();
 
-    class KCookiePrivate;
-    KCookiePrivate * const d;
-};
+            class KCookiePrivate;
+            KCookiePrivate *const d;
+        };
 
-}}
+    }
+}
 
 #endif // __KCookie_h_Included__
