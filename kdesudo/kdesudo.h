@@ -25,11 +25,11 @@
 #include <config.h>
 #endif
 
-#include <qwidget.h>
-#include <qstring.h>
-#include <qtextcodec.h>
-#include <kprocess.h>
-#include <kpassworddialog.h>
+#include <QtGui/QWidget>
+#include <QtCore/QString>
+
+#include <KProcess>
+#include <KPasswordDialog>
 #include <knewpassworddialog.h>
 
 #include "kcookie.h"
@@ -42,58 +42,56 @@
 /* buffer is used when reading from the KProcess child */
 #define BUFSIZE 1024
 
-class KdeSudo : QObject {
-	Q_OBJECT 
-	public:
-		KdeSudo( const QString& icon = QString(),
-		const QString& generic = QString()
-	);
+class KdeSudo : QObject
+{
+    Q_OBJECT
+public:
+    KdeSudo(const QString &icon = QString(), const QString &generic = QString());
+    ~KdeSudo();
 
-	~KdeSudo();
+    enum ResultCodes {
+        AsUser = 10
+    };
 
-	enum ResultCodes { AsUser = 10 };
+private slots:
+    /**
+     * This slot gets executed if sudo creates some output
+     * -- well, in theory it should. Even though the code
+     *  seems to be doing what the API says, it doesn't
+     *  yet do what we need.
+     **/
+    void parseOutput();
 
-	public slots:
+    /**
+     * This slot gets exectuted when sudo exits
+     **/
+    void procExited(int exitCode);
 
-		/*
-		* This slot gets executed if sudo creates some output
-		* -- well, in theory it should. Even though the code
-		*  seems to be doing what the API says, it doesn't
-		*  yet do what we need.
-		*/
-		void parseOutput();
-	
-		/*
-		* This slot gets exectuted when sudo exits
-		*/
-		void procExited(int exitCode);
-	
-		/*
-		* This slot overrides the slot from KPasswordDialog
-		* @see KPasswordDialog
-		*/
-		void pushPassword(const QString&);
-                void slotCancel();
-		void slotUser1();
-		QString validArg(QString arg);
+    /**
+     * This slot overrides the slot from KPasswordDialog
+     * @see KPasswordDialog
+     **/
+    void pushPassword(const QString &);
+    void slotCancel();
+    void slotUser1();
+    QString validArg(QString arg);
 
-	private:
-		void error(const QString&);
-		KProcess *p;
-		bool bError;
-		// bool newDcop; // deprecated
-		bool keepPwd;
-		bool emptyPwd;
-		bool useTerm;
-		bool noExec;
-		bool unCleaned;
-		QString m_tmpName;
-		QString iceauthorityFile;
-		KDESu::KDESuPrivate::KCookie* m_pCookie;
-		void blockSigChild();
-		void unblockSigChild();
+private:
+    void error(const QString &);
+    KProcess *m_process;
+    bool m_error;
+    bool keepPwd;
+    bool emptyPwd;
+    bool useTerm;
+    bool noExec;
+    bool unCleaned;
+    QString m_tmpName;
+    QString iceauthorityFile;
+    KDESu::KDESuPrivate::KCookie *m_pCookie;
+    void blockSigChild();
+    void unblockSigChild();
 
-		KPasswordDialog *m_dialog;
+    KPasswordDialog *m_dialog;
 };
 
 #endif // KDESUDO_H

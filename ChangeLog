@@ -1,3 +1,9 @@
+KdeSudo 3.4.2.4
+------------
+* Drop old and not really useful docbook documentation.
+* Update french and portuguese translations
+* Fix password encoding problem (LP: #400851), patch donated by Felix Geyer.
+
 KdeSudo 3.4.2.3
 ------------
 * Add --desktop cmd line option to manually specify the desktop file used for

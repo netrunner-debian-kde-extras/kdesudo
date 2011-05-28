@@ -21,85 +21,85 @@
 
 #include <kdebug.h>
 
-namespace KDESu {
-namespace KDESuPrivate {
-
-class KCookie::KCookiePrivate
+namespace KDESu
 {
-public:
-    QByteArray m_Display;
+    namespace KDESuPrivate
+    {
+
+        class KCookie::KCookiePrivate
+        {
+        public:
+            QByteArray m_Display;
 #ifdef Q_WS_X11
-    QByteArray m_DisplayAuth;
+            QByteArray m_DisplayAuth;
 #endif
-};
+        };
 
 
 
-KCookie::KCookie()
-    : d( new KCookiePrivate )
-{
+        KCookie::KCookie()
+            : d(new KCookiePrivate)
+        {
 #ifdef Q_WS_X11
-    getXCookie();
+            getXCookie();
 #endif
-}
+        }
 
-KCookie::~KCookie()
-{
-    delete d;
-}
+        KCookie::~KCookie()
+        {
+            delete d;
+        }
 
-QByteArray KCookie::display() const
-{
-    return d->m_Display;
-}
+        QByteArray KCookie::display() const
+        {
+            return d->m_Display;
+        }
 
 #ifdef Q_WS_X11
-QByteArray KCookie::displayAuth() const
-{
-    return d->m_DisplayAuth;
-}
+        QByteArray KCookie::displayAuth() const
+        {
+            return d->m_DisplayAuth;
+        }
 #endif
 
-void KCookie::getXCookie()
-{
+        void KCookie::getXCookie()
+        {
 #ifdef Q_WS_X11
-    d->m_Display = getenv("DISPLAY");
+            d->m_Display = getenv("DISPLAY");
 #else
-    d->m_Display = getenv("QWS_DISPLAY");
+            d->m_Display = getenv("QWS_DISPLAY");
 #endif
-    if (d->m_Display.isEmpty())
-    {
-	kError(900) << k_lineinfo << "$DISPLAY is not set.\n";
-	return;
-    }
+            if (d->m_Display.isEmpty()) {
+                kError(900) << k_lineinfo << "$DISPLAY is not set.\n";
+                return;
+            }
 #ifdef Q_WS_X11 // No need to mess with X Auth stuff
-    QByteArray disp = d->m_Display;
-    if (disp.startsWith("localhost:"))
-       disp.remove(0, 9);
+            QByteArray disp = d->m_Display;
+            if (disp.startsWith("localhost:")) {
+                disp.remove(0, 9);
+            }
 
-    QProcess proc;
-    proc.start("xauth", QStringList() << "list" << disp);
-    if (!proc.waitForStarted())
-    {
-	kError(900) << k_lineinfo << "Could not run xauth.\n";
-	return;
-    }
-    proc.waitForReadyRead(100);
-    QByteArray output = proc.readLine().simplified();
-    if (output.isEmpty())
-    {
-       kWarning(900) << "No X authentication info set for display " <<
-       d->m_Display << endl; return;
-    }
-    QList<QByteArray> lst = output.split(' ');
-    if (lst.count() != 3)
-    {
-	kError(900) << k_lineinfo << "parse error.\n";
-	return;
-    }
-    d->m_DisplayAuth = (lst[1] + ' ' + lst[2]);
-    proc.waitForFinished(100); // give QProcess a chance to clean up gracefully
+            QProcess proc;
+            proc.start("xauth", QStringList() << "list" << disp);
+            if (!proc.waitForStarted()) {
+                kError(900) << k_lineinfo << "Could not run xauth.\n";
+                return;
+            }
+            proc.waitForReadyRead(100);
+            QByteArray output = proc.readLine().simplified();
+            if (output.isEmpty()) {
+                kWarning(900) << "No X authentication info set for display " <<
+                              d->m_Display << endl; return;
+            }
+            QList<QByteArray> lst = output.split(' ');
+            if (lst.count() != 3) {
+                kError(900) << k_lineinfo << "parse error.\n";
+                return;
+            }
+            d->m_DisplayAuth = (lst[1] + ' ' + lst[2]);
+            proc.waitForFinished(100); // give QProcess a chance to clean up gracefully
 #endif
-}
+        }
 
-}}
+    }
+}
