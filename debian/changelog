@@ -1,3 +1,16 @@
+kdesudo (3.4.2.4-1) unstable; urgency=low
+
+  * New 3.4.2.4 upstream release
+    - Drop obsolete docs (Closes: #628326).
+    - Drop all patches, all incorporated upstream.
+
+  * Move packaging repository from Svn to Git:
+    - Update Vcs-* fields.
+  * Change my address to @d.o.
+  * Bump Standards-Version to 3.9.2 without changes needed.
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 28 May 2011 17:41:38 +0200
+
 kdesudo (3.4.2.3-2) unstable; urgency=low
 
   * Portuguese translations
