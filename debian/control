@@ -2,7 +2,7 @@ Source: kdesudo
 Section: kde
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Didier Raboud <didier@raboud.com>
+Uploaders: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>> 7), cdbs, kdelibs5-dev, po-debconf, cmake
 Standards-Version: 3.8.4
 Homepage: https://launchpad.net/kdesudo
