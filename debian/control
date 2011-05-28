@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>> 7), cdbs, kdelibs5-dev, po-debconf, cmake
-Standards-Version: 3.8.4
+Standards-Version: 3.9.2
 Homepage: https://launchpad.net/kdesudo
 Vcs-Git: git://git.debian.org/pkg-kde/kde-extras/kdesudo.git
 Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/kdesudo.git
